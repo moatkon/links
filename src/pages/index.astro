@@ -6,8 +6,18 @@ import ToggleTheme from "../components/ToggleTheme.jsx";
 
 const links = [
   {
-    name: "Moatkon",
+    name: "主站",
     url: "https://www.moatkon.com/",
+    icon: "terminal",
+  },
+  {
+    name: "博客",
+    url: "https://blog.moatkon.com/",
+    icon: "terminal",
+  },
+  {
+    name: "简历",
+    url: "https://resume.moatkon.com/",
     icon: "terminal",
   },
   {
@@ -74,7 +84,7 @@ const links = [
           rel="noopener noreferrer"
           class="text-base flex items-center justify-center gap-1 px-4 py-3.5 rounded-full bg-white dark:bg-zinc-900 ring-1 ring-zinc-300 dark:ring-zinc-700  hover:bg-zinc-200  dark:hover:bg-zinc-700 text-zinc-800 dark:text-white font-medium shadow hover:shadow-md"
         >
-          <Icon name={link.icon} class="w-5 h-5" aria-label={link.name} />
+          {/*<Icon name={link.icon} class="w-5 h-5" aria-label={link.name} />*/}
           {link.name}
         </a>
       ))}
