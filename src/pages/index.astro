@@ -52,6 +52,15 @@ const links = [
   //   icon: "gumroad",
   // },
 ];
+
+
+const supports = [
+  {
+    name: "Ko-fi ☕️",
+    url: "https://ko-fi.com/moatkon",
+    icon: "terminal",
+  }
+];
 ---
 
 <Layout>
@@ -94,5 +103,24 @@ const links = [
         </a>
       ))}
     </div>
+
+    <!--Support-->
+    <h4 class="text-xl font-bold text-zinc-900 dark:text-white tracking-tight pt-6">支持</h4>
+    <div class="mt-6 flex flex-col gap-4">
+      {supports.map((support) => (
+        <a
+          href={support.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-base flex items-center justify-center gap-1 px-4 py-3.5 rounded-full bg-white dark:bg-zinc-900 ring-1 ring-zinc-300 dark:ring-zinc-700  hover:bg-zinc-200  dark:hover:bg-zinc-700 text-zinc-800 dark:text-white font-medium shadow hover:shadow-md"
+        >
+          {/*<Icon name={link.icon} class="w-5 h-5" aria-label={link.name} />*/}
+          {support.name}
+        </a>
+      ))}
+    </div>
+
+
+
   </main>
 </Layout>
