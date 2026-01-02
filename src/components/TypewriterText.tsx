@@ -7,7 +7,9 @@ function TypewriterText() {
       <Typewriter
         options={{
           strings: [
-            "Java软件工程师 💻"
+            "hello",
+            "welcome",
+            "have fun here"
           ],
           autoStart: true,
           loop: true,
