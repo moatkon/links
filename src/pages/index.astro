@@ -6,6 +6,12 @@ import ToggleTheme from "../components/ToggleTheme.jsx";
 
 const links = [
   {
+    name: "X2Post 社区",
+    url: "https://x2post.com",
+    icon: "terminal",
+    highlight: true,
+  },
+  {
     name: "主站",
     url: "https://www.moatkon.com/",
     icon: "terminal",
@@ -102,8 +108,21 @@ const supports = [
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-base flex items-center justify-center gap-1 px-4 py-3.5 rounded-full bg-white dark:bg-zinc-900 ring-1 ring-zinc-300 dark:ring-zinc-700  hover:bg-zinc-200  dark:hover:bg-zinc-700 text-zinc-800 dark:text-white font-medium shadow hover:shadow-md"
+          class={`text-base flex items-center justify-center gap-1 px-4 py-3.5 rounded-full font-medium shadow hover:shadow-md ${
+            link.highlight
+              ? "bg-teal-600 text-white ring-1 ring-teal-600 hover:bg-teal-700"
+              : "bg-white dark:bg-zinc-900 ring-1 ring-zinc-300 dark:ring-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-800 dark:text-white"
+          }`}
         >
+          {link.highlight && (
+            <img
+              src="/x2post.svg"
+              alt="X2Post"
+              class="h-5 w-5 rounded"
+              width="20"
+              height="20"
+            />
+          )}
           {/*<Icon name={link.icon} class="w-5 h-5" aria-label={link.name} />*/}
           {link.name}
         </a>
